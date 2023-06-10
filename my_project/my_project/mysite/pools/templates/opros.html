@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Personal Portfolio Website - Html, Css & Javascript</title>
+    <link rel="stylesheet" href="{% static 'pools/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pools/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible"
+      content="IE=edge">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+<title>
+    Build a Survey Form using HTML and CSS
+</title>
+
+<style>
+
+    /* Styling the Body element i.e. Color,
+    Font, Alignment */
+    body {
+        background-color: #ffffff;
+        font-family: Verdana;
+        text-align: center;
+    }
+
+    /* Styling the Form (Color, Padding, Shadow) */
+    form {
+        background-color: #fff;
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px 20px;
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Styling form-control Class */
+    .form-control {
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    /* Styling form-control Label */
+    .form-control label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Styling form-control input,
+    select, textarea */
+    .form-control input,
+    .form-control select,
+    .form-control textarea {
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        padding: 10px;
+        display: block;
+        width: 95%;
+    }
+
+    /* Styling form-control Radio
+    button and Checkbox */
+    .form-control input[type="radio"],
+    .form-control input[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+    }
+
+    /* Styling Button */
+    button {
+        background-color: #6a59d1;
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        font-size: 21px;
+        display: block;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+
+<body>
+<!--=======Scroll to top button=======-->
+<div class="scrollToTop-btn flex-center">
+    <i class="fas fa-arrow-up"></i>
+</div>
+<!--=======Header=======-->
+<header>
+    <div class="nav-bar">
+        <a href="/" class="logo">ГрузДоставка</a>
+        <div class="navigation">
+            <div class="nav-items">
+                <div class="nav-close-btn"></div>
+                <a>+ 25 12 2012</a>
+            </div>
+        </div>
+        <div class="nav-menu-btn"></div>
+    </div>
+</header>
+<!-- Create Form -->
+<form id="form">
+
+    <!-- Details -->
+    <div class="form-control">
+        <label for="name" id="label-name">
+            Имя
+        </label>
+
+        <!-- Input Type Text -->
+        <input type="text"
+               id="name"
+               placeholder="Введите свое имя"/>
+    </div>
+
+    <div class="form-control">
+        <label for="email" id="label-email">
+            Электронная почта
+        </label>
+
+        <!-- Input Type Email-->
+        <input type="email"
+               id="email"
+               placeholder="Введите свою почту"/>
+    </div>
+
+    <div class="form-control">
+        <label for="age" id="label-age">
+            Возраст
+        </label>
+
+        <!-- Input Type Text -->
+        <input type="text"
+               id="age"
+               placeholder="Введите возраст"/>
+    </div>
+
+    <div class="form-control">
+        <label for="role" id="label-role">
+            Кем вы являетесь
+        </label>
+
+        <!-- Dropdown options -->
+        <select name="role" id="role">
+            <option value="student">Студент</option>
+            <option value="professional">Предприниматель</option>
+            <option value="other">Другое</option>
+        </select>
+    </div>
+
+    <div class="form-control">
+        <label>
+            Порекомендуете ли вы ГрузПеревозки друзьям?
+        </label>
+
+        <!-- Input Type Radio Button -->
+        <label for="recommed-1">
+            <input type="radio"
+                   id="recommed-1"
+                   name="recommed">Да</input>
+        </label>
+        <label for="recommed-2">
+            <input type="radio"
+                   id="recommed-2"
+                   name="recommed">Нет</input>
+        </label>
+        <label for="recommed-3">
+            <input type="radio"
+                   id="recommed-3"
+                   name="recommed">Может быть</input>
+        </label>
+    </div>
+
+    <div class="form-control">
+        <label>Какие товары вас больше всего интересуют?
+            <small>(Check all that apply)</small>
+        </label>
+        <!-- Input Type Checkbox -->
+        <label for="inp-1">
+            <input type="checkbox"
+                   name="inp">Люди</input></label>
+        <label for="inp-2">
+            <input type="checkbox"
+                   name="inp">Автомобили/запчасти</input></label>
+        <label for="inp-3">
+            <input type="checkbox"
+                   name="inp">Оружие</input></label>
+        <label for="inp-4">
+            <input type="checkbox"
+                   name="inp">Строй.материалы</input></label>
+        <label for="inp-5">
+            <input type="checkbox"
+                   name="inp">Алкоголь</input></label>
+    </div>
+
+    <div class="form-control">
+        <label for="comment">
+            Оставьте комментарий
+        </label>
+
+        <!-- multi-line text input control -->
+        <textarea name="comment" id="comment"
+                  placeholder="Enter your comment here">
+			</textarea>
+    </div>
+
+    <!-- Multi-line Text Input Control -->
+    <button type="submit" value="submit">
+        Подтвердить
+    </button>
+</form>
+
+<!--=======Footer=======-->
+<footer>
+    <div class="footer-container">
+        <div class="hr"></div>
+        <div class="info group">
+            <h3>Больше:</h3>
+            <ul>
+                <li><a href="/#about">О компании</a></li>
+                <li><a href="/#services">Услуги</a></li>
+                <li><a href="/#partfolio">Партнёры</a></li>
+                <li><a href="/#contact">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="hr"></div>
+    </div>
+</footer>
+<!--=======External scripts=======-->
+<script src="{% static 'pools/js/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'pools/js/main.js' %}"></script>
+
+</body>
+</html>

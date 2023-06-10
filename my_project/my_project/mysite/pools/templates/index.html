@@ -1,0 +1,387 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Personal Portfolio Website - Html, Css & Javascript</title>
+    <link rel="stylesheet" href="{% static 'pools/css/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'pools/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+<!--=======Scroll to top button=======-->
+<div class="scrollToTop-btn flex-center">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<!--=======Light/Dark theme button=======-->
+<div class="theme-btn flex-center">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+</div>
+
+<!--=======Header=======-->
+<header>
+    <div class="nav-bar">
+        <a href="logo.html" class="logo">ГрузДоставка</a>
+        <div class="navigation">
+            <div class="nav-items">
+                <div class="nav-close-btn"></div>
+                <a class="active" href="#home">Главная</a>
+                <a href="#about">О компании</a>
+                <a href="#services">Услуги</a>
+                <a href="#partfolio">Партнёры</a>
+                <a href="#contact">Контакты</a>
+            </div>
+        </div>
+        <a>+25 12 2012<br>nice.django@unchained.com </a>
+        <div class="nav-menu-btn"></div>
+    </div>
+</header>
+
+<!--=======Home section=======-->
+<section class="home flex-center" id="home">
+    <div class="home-container">
+        <div class="media-icons">
+            <a href="https://vk.com/ngolopolosov"><i class="fab fa-facebook"></i></a>
+            <a href="https://vk.com/ngolopolosov"><i class="fab fa-instagram"></i></a>
+            <a href="https://vk.com/ngolopolosov"><i class="fab fa-twitter "></i></a>
+        </div>
+        <div class="info">
+            <h2>Из Европы в Россию</h2>
+            <h3>Доставим ваш груз быстро и качественно или вернем деньги</h3>
+            <p>Подберем и рассчитаем стоимость стоимость вашей доставки и груза за 3 минуты!</p>
+            <a href="calc.html" class="btn"> Рассчитать стоимость </a>
+        </div>
+        <div class="home-img">
+            <img src="{% static 'pools/img/cargo(rus).png' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<!--=======About section=======-->
+<section class="about section" id="about">
+    <div class="container flex-center">
+        <h1 class="section-title-01">О компании</h1>
+        <h2 class="section-title-02">О компании</h2>
+        <div class="content flex-center">
+            <div class="about-img">
+                <img src="{% static 'pools/img/about-us-img.jpg' %}" alt="">
+            </div>
+            <div class="about-info">
+                <div class="description">
+                    <h3>ГрузДоставка</h3>
+                    <h4>Лидер среди компаний грузоперевозок в России</h4>
+                    <p>Задача нашей компании - быстрая и качественная перевозка ващих грузов. За годы работы мы
+                        усовершенствовали стратегию в доставке грузов.</p>
+                </div>
+                <ul class="professional-list">
+                    <li class="list-item">
+                        <h3>10</h3>
+                        <span>Лет<br>Опыта</span>
+                    </li>
+                    <li class="list-item">
+                        <h3>3тыс</h3>
+                        <span>Счастливых<br>Клиентов </span>
+                    </li>
+                    <li class="list-item">
+                        <h3>5тыс</h3>
+                        <span>Успешных<br>Перевозок</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--=======Services section=======-->
+<section class="services section " id="services">
+    <div class="container flex-center">
+        <h1 class="section-title-01">Услуги</h1>
+        <h2 class="section-title-02">Услуги</h2>
+        <div class="content">
+            <div class="services-description">
+                <h3>Все наши услуги</h3>
+            </div>
+            <ul class="service-list">
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h3>Авиадоставка</h3>
+                        <div class="learn-more-btn">Узнать больше <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>Авиадоставка</h3>
+                            <h4>От 10000 рублей</h4>
+                            <p>Авиаперевозка самая быстрая, среди других видов транспорта.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fas fa-photo-video"></i>
+                        <h3>Морские перевозки</h3>
+                        <div class="learn-more-btn">Узнать больше <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>Морские перевозки</h3>
+                            <h4>От 9000 рублей</h4>
+                            <p>Морской транспорт позволяет доставлять огромные объёмы товара за один раз.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fas fa-file-code"></i>
+                        <h3>Автодоставка</h3>
+                        <div class="learn-more-btn">Узнать больше <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>Автодоставка</h3>
+                            <h4>От 7000 рублей</h4>
+                            <p>Для автомобильного транспорта характерна высокая маневренность: при необходимости фура
+                                может сменить маршрут. Быстрое прохождение таможенного контроля.</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="service-container">
+                    <div class="service-card">
+                        <i class="fas fa-align-left"></i>
+                        <h3>Страхование грузов</h3>
+                        <div class="learn-more-btn">Узнать больше <i class="fas fa-long-arrow-alt-right"></i></div>
+                    </div>
+                    <div class="service-modal flex-center">
+                        <div class="service-modal-body">
+                            <i class="fas fa-times modal-close-btn"></i>
+                            <h3>Страхование грузов </h3>
+                            <h4>Страхование грузов по низкой ставке 0.2%</h4>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!--=======Portfolio section=======-->
+<section class="partfolio section" id="partfolio">
+    <div class="container flex-center">
+        <h1 class="section-title-01">Наши партнёры</h1>
+        <h2 class="section-title-02">Наши партнёры</h2>
+        <div class="content">
+            <div class="partfolio-list">
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overplay"></div>
+                        <div class="info">
+                            <h3>FIAT</h3>
+                        </div>
+                        <img src="{% static 'pools/img/fiat-logo.jpg' %}" alt="">
+                    </div>
+                    <div class="partfolio-model  flex-center">
+                        <div class="partfolio-model-body">
+                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <h3>FIAT</h3>
+                            <img src="{% static 'pools/img/port-img1.jpg' %}" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overplay"></div>
+                        <div class="info">
+
+                            <h3>UI/UX Desing</h3>
+                            <span>Youtube</span>
+                        </div>
+                        <img src="{% static 'pools/img/port-img2.jpg' %}" alt="">
+                    </div>
+                    <div class="partfolio-model  flex-center">
+                        <div class="partfolio-model-body">
+                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <h3>UI/UX Desing</h3>
+                            <img src="{% static 'pools/images/port-img2.jpg' %}" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-card-container">
+                    <div class="img-card">
+                        <div class="overplay"></div>
+                        <div class="info">
+                            <h3>Branding &x Desing</h3>
+                            <span>Youtube</span>
+                        </div>
+                        <img src="{% static 'pools/img/port-img3.jpg' %}" alt="">
+                    </div>
+                    <div class="partfolio-model  flex-center">
+                        <div class="partfolio-model-body">
+                            <i class="fas fa-times partfolio-close-btn"></i>
+                            <h3>Branding &x Desing</h3>
+                            <img src="{% static 'pools/img/port-img3.jpg' %}" alt="">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--=======Get-in-touct=======-->
+    <div class="get-in-touch sub-section">
+        <div class="container">
+            <div class="content flex-center">
+                <div class="contact-card flex-center">
+                    <div class="title">
+                        <h4>Давайте</h4>
+                        <h3>Составим чек лист</h3>
+                    </div>
+                    <a href="opros.html" class="btn">Пройти <i class="fas fa-arrow-circle-right"></i> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!--=======Our Clients=======-->
+    <div class="our-client sub-section">
+        <div class="container flex-center">
+            <h1 class="section-title-01">Наши клиенты</h1>
+            <h2 class="section-title-02">Наши клиенты</h2>
+            <div class="content">
+                <div class="swiper client-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex-center">
+                            <div class="client-img">
+                                <img src="{% static 'pools/img/calvin.jpg' %}" alt="">
+                            </div>
+                            <div class="clietn-details">
+                                <p>Обаятельный и одновременно циничный и жестокий рабовладелец , владелец большой
+                                    плантации, известной как “Кэндилэнд“. Достаточно приветлив, что не мешает ему с
+                                    улыбкой на лице отдавать абсолютно бесчеловечные приказы. Любит книги А. Дюма и
+                                    когда его называют «месье Кэнди», хотя при этом по-французски не знает ни слова.</p>
+                                <h3>Кэлвин Кэнди</h3>
+                                <span>Предприниматель</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex-center">
+                            <div class="client-img">
+                                <img src="{% static 'pools/img/stiven.jpg' %}" alt="">
+                            </div>
+                            <div class="clietn-details">
+                                <p>Пожилой чернокожий дворецкий плантатора Кэнди. На публике весьма убедительно косит
+                                    под старого сварливого маразматика, однако на деле проявляет недюжинную
+                                    проницательность, интеллект и изощренность, являясь де-факто вторым человеком в
+                                    Кэндиленде.</p>
+                                <h3>Стивен</h3>
+                                <span>Штабная крыса</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex-center">
+                            <div class="client-img">
+                                <img src="{% static 'pools/img/king.jpg' %}" alt="">
+                            </div>
+                            <div class="clietn-details">
+                                <p>Иммигрант из Германии. Охотник за головами, использующий свою бывшую профессию
+                                    дантиста как прикрытие.</p>
+                                <h3>Кинг Шульц</h3>
+                                <span>Охотник</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                    <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--=======Contact section=======-->
+<section class="contact section " id="contact">
+    <div class="container flex-center">
+        <h1 class="section-title-01">Контакты</h1>
+        <h2 class="section-title-02">Контакты</h2>
+        <div class="content">
+            <div class="contact-left">
+                <h2>Обсудим ваш заказ</h2>
+                <ul class="contact-list">
+                    <li>
+                        <h3 class="item-title">
+                            <i class="fas fa-phone"></i>Номер телефона
+                        </h3>
+                        <span>+ 25 12 2012</span>
+                    </li>
+                    <li>
+                        <h3 class="item-title">
+                            <i class="fas fa-envelope"></i>Голубиная почта
+                        </h3>
+                        <span><a href="mailto:martain@email.co">nice.django@unchained.com</a></span>
+                    </li>
+                    <li>
+                        <h3 class="item-title">
+                            <i class="fas fa-map-marker-alt"></i>Адрес
+                        </h3>
+                        <span>к1456, Зеленоград</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-rigth">
+                <p>Мы всегда открыты для вас <br><span>и ваших заказов.</span></p>
+                <form action="feedback/" method="post" class="contact-form">
+                    {% csrf_token %}
+                    <div class="third-row">
+                        <input name="email" type="email" placeholder="Почта">
+                        <textarea name="message" id="" rows="7" placeholder="Сообщение"></textarea>
+                    </div>
+                    <button class="btn" type="submit">Отправить голубя <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--=======Footer=======-->
+<footer>
+    <div class="footer-container">
+        <div class="hr"></div>
+        <div class="info group">
+            <h3>Больше</h3>
+            <ul>
+                <li><a href="#about">О компании</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#partfolio">Партнёры</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="hr"></div>
+    </div>
+</footer>
+<!--=======External scripts=======-->
+<script src="{% static 'pools/js/swiper-bundle.min.js' %}"></script>
+<script src="{% static 'pools/js/main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>api</title>
+</head>
+<body>
+{% for site, url in responce %}
+  <div style="margin: 20px">
+    <div>site - {{ site }}</div>
+    <div>url - <a href="{{ url }}">{{url}}</a></div>
+  </div>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+</head>
+    <body>
+        <div>Обратная связь</div>
+            {% for feedback in feedbacks.all %}
+                <div style="margin: 20px">
+                  <div>Кто написал</div>
+                  <div>{{ feedback.email }}</div>
+                  <div>Что написал</div>
+                  <div>{{ feedback.text }}</div>
+                </div>
+            {% endfor %}
+    </body>
+</html>
